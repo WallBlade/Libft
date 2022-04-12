@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 19:58:28 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/12 12:56:44 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/12 15:02:56 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/12 15:07:16 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+int	isprint(int c)
 {
-	size_t			i;
-	unsigned char	*d_cpy;
-	unsigned char	*s_cpy;
-
-	if (!dest && !src)
-		return (NULL);
-	d_cpy = (unsigned char *)dest;
-	s_cpy = (unsigned char *)src;
-	i = 0;
-	while (src[i] && i < n)
-	{
-		d_cpy[i] = s_cpy[i];
-		i++;
-	}
-	return (dest);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

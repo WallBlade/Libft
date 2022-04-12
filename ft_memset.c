@@ -6,12 +6,11 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 01:33:10 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/12 00:09:50 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/12 15:35:46 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -28,11 +27,11 @@ void	*ft_memset(void *s, int c, size_t n)
 /*int main()
 {
 	int i = 0;
-	int *s = malloc(sizeof(int) * 40);
-	s = memset(s, 5, 20);
+	char *s = (char *)malloc(sizeof(char) * 40);
+	s = ft_memset(s, 'b', 20);
 	while (i < 40)
 	{
-		printf("%d", s[i]);
+		printf("%c", s[i]);
 		i++;
 	}
     return (0);
