@@ -6,11 +6,11 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 01:32:59 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/10 20:29:17 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/13 14:07:10 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

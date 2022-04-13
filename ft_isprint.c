@@ -6,11 +6,11 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 15:02:56 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/12 15:07:16 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/13 23:27:25 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

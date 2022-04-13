@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 01:54:54 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:37:04 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/13 20:32:09 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/13 23:31:38 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
+	if (ft_strlen(to_find) == 0)
+		return ((char *)str);
+	while (str[i] && i < n)
 	{
-		dest[i] = src[j];
+		j = 0;
+		if (str[i] == to_find[j])
+		{
+			if (ft_strncmp(str + i, to_find + j, ft_strlen(to_find)) == 0)
+				return ((char *)str + i);
+			j++;
+		}
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (NULL);
 }
 
 /*int main()
 {
-        char dest[10] = "bonjour";
-        const char *src = "bonjoir";
-        printf("%s\n", ft_strcat(dest, src));
-        printf("%s\n", strcat(dest, src));
+        char *str = "Je suis une zon zone de recherche";
+        char *to_find = "zone";
+        printf("ft : %s\n", ft_strnstr(str, to_find, 40));
         return (0);
 }*/

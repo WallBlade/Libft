@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 01:32:30 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:30:47 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/13 23:18:10 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/13 23:24:02 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-char	*ft_strdup(const char *src)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
-	char	*dup;
+	char	*tab;
 
-	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dup)
-		return (0);
-	i = 0;
-	while (src[i])
-	{
-		dup[i] = src[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+	tab = malloc(count * size);
+	if (!tab)
+		return (NULL);
+	ft_bzero(tab, size * count);
+	return (tab);
 }
-
-/*int main()
-{
-	char *src = "Salut";
-	char *dup = ft_strdup(src);
-	printf("Src = %s\n", src);
-	printf("Dup = %s\n", dup);
-	return (0);
-}*/

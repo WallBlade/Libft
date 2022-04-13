@@ -6,13 +6,13 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 14:02:43 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/12 14:05:02 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/13 23:24:59 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);

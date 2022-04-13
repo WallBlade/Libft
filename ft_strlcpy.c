@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 01:32:30 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:30:47 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/13 12:55:41 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/13 13:04:49 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *src)
+size_t	strlcpy(char *dest, const char *src, size_t size)
 {
-	int		i;
-	char	*dup;
+	int	i;
 
-	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dup)
-		return (0);
 	i = 0;
-	while (src[i])
+	if (!src || size < 0)
+		return (0);
+	while (src[i] && i < size - 1)
 	{
-		dup[i] = src[i];
+		dest[i] = src[i];
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (ft_strlen(src));
 }
-
-/*int main()
-{
-	char *src = "Salut";
-	char *dup = ft_strdup(src);
-	printf("Src = %s\n", src);
-	printf("Dup = %s\n", dup);
-	return (0);
-}*/

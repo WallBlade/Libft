@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 01:32:30 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:30:47 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/13 13:25:24 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/13 13:47:10 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strchr(const char *str, int c)
 {
 	int		i;
-	char	*dup;
 
-	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dup)
-		return (0);
 	i = 0;
-	while (src[i])
+	while (str[i])
 	{
-		dup[i] = src[i];
+		if (str[i] == c)
+		{
+			return ((char *)str + i);
+		}
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (0);
 }
 
 /*int main()
 {
-	char *src = "Salut";
-	char *dup = ft_strdup(src);
-	printf("Src = %s\n", src);
-	printf("Dup = %s\n", dup);
-	return (0);
+	const char *str = "s aus woqi b";
+	char c = 'o';
+	printf("%s\n", ft_strchr(str, c));
+	printf("%s\n", strchr(str, c));
 }*/

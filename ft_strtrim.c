@@ -1,40 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 01:32:30 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:30:47 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/14 01:05:03 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/14 01:14:53 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
-	char	*dup;
+	char	*trim;
 
-	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dup)
-		return (0);
-	i = 0;
-	while (src[i])
-	{
-		dup[i] = src[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+	
 }
-
-/*int main()
-{
-	char *src = "Salut";
-	char *dup = ft_strdup(src);
-	printf("Src = %s\n", src);
-	printf("Dup = %s\n", dup);
-	return (0);
-}*/

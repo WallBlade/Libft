@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 01:33:10 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/12 15:35:46 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/13 23:36:18 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr;
-	
+
 	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)

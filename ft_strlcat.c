@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 01:32:30 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:30:47 by zel-kass         ###   ########.fr       */
+/*   Created: 2022/04/13 11:49:55 by zel-kass          #+#    #+#             */
+/*   Updated: 2022/04/13 13:05:22 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *src)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int		i;
-	char	*dup;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	size_t	l;
 
-	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dup)
-		return (0);
 	i = 0;
-	while (src[i])
-	{
-		dup[i] = src[i];
+	j = 0;
+	l = 0;
+	while (dest[i])
 		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+	while (src[j])
+		j++;
+	k = i;
+	if (size <= i)
+		return (j + size);
+	while ((l < (size - 1 - i)) && (src[i]))
+		dest[k++] = src[l++];
+	dest[k] = '\0';
+	return (i + j);
 }
-
-/*int main()
-{
-	char *src = "Salut";
-	char *dup = ft_strdup(src);
-	printf("Src = %s\n", src);
-	printf("Dup = %s\n", dup);
-	return (0);
-}*/
