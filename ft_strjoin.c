@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 00:41:16 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/14 01:18:43 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:10:01 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
+	//int	i;
+	//int	j;
 	size_t	len;
 	char	*dest;
 
@@ -23,7 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest = (char *)malloc(sizeof(char) * len);
 	if (!dest)
 		return (NULL);
-	i = 0;
+	dest[len] = '\0';
+	/*i = 0;
 	j = 0;
 	while (s1[i])
 	{
@@ -35,8 +36,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		dest[i] = s2[j];
 		i++;
 		j++;
-	}
-	dest[i] = '\0';
+	}*/
+	ft_strcat(dest, s1);
+	ft_strcat(dest, s2);
 	return (dest);
 }
 

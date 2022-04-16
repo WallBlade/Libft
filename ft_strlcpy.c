@@ -6,18 +6,18 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 12:55:41 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 13:04:49 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/14 13:38:25 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!src || size < 0)
+	if (!src)
 		return (0);
 	while (src[i] && i < size - 1)
 	{

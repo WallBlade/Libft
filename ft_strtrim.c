@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 01:05:03 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/14 15:52:11 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/15 18:15:28 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trim);
 }
 
-/*int main()
+int main()
 {
 	char *s1 = "coucou soundous";
-	char *set = "cou";
+	char *set = "u";
 	printf("og  str = %s\n", s1);
 	printf("removed = %ld\n", ft_countset(s1, set));
 	printf("trimmed = %s\n", ft_strtrim(s1, set));
 	return (0);
-}*/
+}
