@@ -6,7 +6,7 @@
 #    By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/13 12:27:26 by zel-kass          #+#    #+#              #
-#    Updated: 2022/04/14 16:26:59 by zel-kass         ###   ########.fr        #
+#    Updated: 2022/04/30 16:24:05 by zel-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC = ft_memset.c \
 	ft_split.c \
 	ft_itoa.c \
 	ft_strmapi.c \
+	ft_striteri.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \

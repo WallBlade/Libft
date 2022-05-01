@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 13:55:45 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:37:29 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/29 18:18:20 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t	i;
+	int	i;
 
-	i = ft_strlen(str) - 1;
-	while (str[i])
+	i = ft_strlen(str);
+	if (c > 255)
+		c = c % 256;
+	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((char *)str + i);
 		i--;
 	}
-	return (0);
+	return (NULL);
 }
 
 /*int main()

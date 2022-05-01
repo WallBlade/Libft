@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 01:05:03 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/15 18:15:28 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/30 15:04:35 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_countset(char const *str, char const *set)
 	count = 0;
 	while (str[i])
 	{
-		if (ft_isset(set, str[i]) == 1)
+		if (ft_isset(set, str[i]) == 0)
 			count++;
 		i++;
 	}
@@ -49,31 +49,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 	char	*trim;
 
-	len = ft_strlen(s1) - ft_countset(s1, set) + 1;
-	trim = (char *)malloc(sizeof(char) * len);
+	len = ft_countset(s1, set);
+	trim = (char *)malloc(sizeof(char) * (len + 1));
 	if (!trim)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
-	while (s1[i])
-	{
-		if (!ft_isset(set, s1[i]))
-		{
-			while (!ft_isset(set, s1[i]))
-				trim[j++] = s1[i++];
-		}
-		i++;
-	}
+	while (s1[++i])
+		if (ft_isset(set, s1[i]) == 0)
+			trim[j++] = s1[i];
 	trim[j] = '\0';
 	return (trim);
 }
 
-int main()
+/*int main()
 {
-	char *s1 = "coucou soundous";
-	char *set = "u";
+	char *s1 = "   xxxtripouille";
+	char *set = " x";
 	printf("og  str = %s\n", s1);
 	printf("removed = %ld\n", ft_countset(s1, set));
 	printf("trimmed = %s\n", ft_strtrim(s1, set));
 	return (0);
-}
+}*/

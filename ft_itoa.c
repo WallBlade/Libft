@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 01:02:27 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/13 23:28:13 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/04/30 15:32:36 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ long	ft_numlen(long nb)
 	long	size;
 
 	size = 0;
+	if (nb == 0)
+		size++;
 	if (nb < 0)
 	{
 		nb *= -1;
