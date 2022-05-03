@@ -25,8 +25,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 		j = 0;
 		if (str[i] == to_find[j])
 		{
-			if (ft_strncmp(str + i, to_find + j, ft_strlen(to_find)) == 0 
-                && i + ft_strlen(to_find) <= n)
+			if (ft_strncmp(str + i, to_find + j, ft_strlen(to_find)) == 0
+				&& i + ft_strlen(to_find) <= n)
 				return ((char *)str + i);
 			j++;
 		}
