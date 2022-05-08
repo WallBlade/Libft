@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 21:21:28 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/30 21:28:56 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/05/08 20:18:43 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ t_list	*ft_lstlast(t_list *lst)
 	if (!lst)
 		return (NULL);
 	while (lst)
-		lst = lst->next;
+		lst = lst -> next;
 	return (lst);
 }

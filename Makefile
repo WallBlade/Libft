@@ -6,7 +6,7 @@
 #    By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/13 12:27:26 by zel-kass          #+#    #+#              #
-#    Updated: 2022/04/30 16:24:05 by zel-kass         ###   ########.fr        #
+#    Updated: 2022/05/06 17:49:17 by zel-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,10 @@ BONUS_SRC = ft_lstnew.c \
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 OBJ = $(SRC:.c=.o)
+
+# so:
+#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+#	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 all: $(NAME)
 

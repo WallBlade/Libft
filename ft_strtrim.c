@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 01:05:03 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/30 15:04:35 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/05/08 20:12:39 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /*int main()
 {
-	char *s1 = "   xxxtripouille";
-	char *set = " x";
+	char *s1 = "|||///Salut/Ca|Va|/";
+	char *set = "|/";
 	printf("og  str = %s\n", s1);
 	printf("removed = %ld\n", ft_countset(s1, set));
 	printf("trimmed = %s\n", ft_strtrim(s1, set));

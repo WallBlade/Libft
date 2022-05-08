@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 21:30:20 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/04/30 21:52:21 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/05/08 19:43:08 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	while (back->next)
-		back = back->next;
-	back->next = new;
+	while (back -> next)
+		back = back -> next;
+	back -> next = new;
 }

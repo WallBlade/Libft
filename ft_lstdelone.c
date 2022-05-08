@@ -6,6 +6,14 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 16:54:49 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/05/01 16:54:51 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/05/08 20:56:55 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	del(lst->content);
+	free(lst);
+}
