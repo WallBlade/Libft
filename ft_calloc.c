@@ -6,7 +6,7 @@
 /*   By: zel-kass <zel-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 23:18:10 by zel-kass          #+#    #+#             */
-/*   Updated: 2022/05/08 18:44:10 by zel-kass         ###   ########.fr       */
+/*   Updated: 2022/05/10 21:08:58 by zel-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*tab;
 
-	if (count == 0 || size == 0)
-		return (NULL);
-	if ((count == SIZE_MAX && size > 1) || (size == SIZE_MAX && count > 1))
+	if (count && ((count * size / count) != size))
 		return (NULL);
 	tab = malloc(count * size);
 	if (!tab)

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_sublen(char const *str, unsigned int start, size_t len)
+static size_t	ft_sublen(char const *str, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	j;

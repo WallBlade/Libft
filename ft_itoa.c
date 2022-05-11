@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-long	ft_numlen(long nb)
+static long	ft_numlen(long nb)
 {
 	long	size;
 

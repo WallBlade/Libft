@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_countwords(char const *str, char sep)
+static size_t	ft_countwords(char const *str, char sep)
 {
 	size_t	i;
 	size_t	count;
@@ -33,7 +33,7 @@ size_t	ft_countwords(char const *str, char sep)
 	return (count);
 }
 
-size_t	ft_wordlen(char const *str, char sep, int i)
+static size_t	ft_wordlen(char const *str, char sep, int i)
 {
 	size_t	len;
 
@@ -44,6 +44,17 @@ size_t	ft_wordlen(char const *str, char sep, int i)
 		len++;
 	}
 	return (len);
+}
+
+static char	**ft_freetab(char **s, size_t n)
+{
+	while (n > 0)
+	{
+		free(s[n]);
+		n--;
+	}
+	free(s);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -65,7 +76,7 @@ char	**ft_split(char const *s, char c)
 		k = 0;
 		split[j] = (char *)malloc(sizeof(char) * (ft_wordlen(s, c, i) + 1));
 		if (!split[j])
-			return (NULL);
+			return (ft_freetab(split, j), NULL);
 		while (s[i] && s[i] != c)
 			split[j][k++] = s[i++];
 		split[j][k] = '\0';
@@ -74,18 +85,18 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-/*int main()
-{
-	char *str = "  tripouille  42  ";
-	char sep = ' ';
-	char **split = ft_split(str, sep);
-	int i = 0;
-	printf("wrd_count = %ld\n", ft_countwords(str, sep));
-	//printf("%ld\n", ft_wordlen(str, sep, 9));
-	while (split[i])
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
-	return (0);
-}*/
+// int main()
+// {
+// 	char *str = "  tripouille  42  ";
+// 	char sep = ' ';
+// 	char **split = ft_split(str, sep);
+// 	int i = 0;
+// 	printf("wrd_count = %ld\n", ft_countwords(str, sep));
+// 	//printf("%ld\n", ft_wordlen(str, sep, 9));
+// 	// while (split[i])
+// 	// {
+// 	// 	printf("%s\n", split[i]);
+// 	// 	i++;
+// 	// }
+// 	return (0);
+// }
